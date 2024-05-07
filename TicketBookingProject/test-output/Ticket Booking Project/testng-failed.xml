@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Ticket Booking Project]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TestCasesSuite(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.test.testcases.TC1_clickSearch">
+        <methods>
+          <include name="endAutomationSuite"/>
+          <include name="launchBrowser"/>
+          <include name="tearDown"/>
+          <include name="additionagain"/>
+          <include name="startAutomationSuite"/>
+          <include name="divisionagain"/>
+        </methods>
+      </class> <!-- com.test.testcases.TC1_clickSearch -->
+    </classes>
+  </test> <!-- TestCasesSuite(failed) -->
+</suite> <!-- Failed suite [Ticket Booking Project] -->
