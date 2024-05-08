@@ -13,6 +13,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.test.testinput.ReadInputData;
+import com.test.testutility.ExtentReport;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -20,6 +21,7 @@ public class BaseClass {
 	@BeforeSuite(groups="smoke")
 	public void startAutomationSuite()
 	{
+		ExtentReport.setExtent();
 		System.out.println("Project started");
 	}
 	
@@ -33,6 +35,7 @@ public class BaseClass {
 	@BeforeMethod(groups="smoke")
 	public void launchBrowser(@Optional("chrome") String browserName)
 	{
+		
 		try {
 		if(browserName.equalsIgnoreCase("chrome") ) {
 			driver = new ChromeDriver();
@@ -55,6 +58,7 @@ public class BaseClass {
 	@AfterMethod(groups="smoke")
 	public void tearDown()
 	{
+		ExtentReport.endReport();
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
