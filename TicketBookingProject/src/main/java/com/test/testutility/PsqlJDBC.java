@@ -1,6 +1,7 @@
 package com.test.testutility;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -10,7 +11,8 @@ public class PsqlJDBC extends BaseClass{
 	
 	public void dbConnection()
 	{
-		Connection con = driver.getConnection("jdbc location");
+		try {
+		Connection con = DriverManager.getConnection("jdbc location");
 		
 		Statement st = con.createStatement();
 		ResultSet set = st.executeQuery("select * from employees");
@@ -19,7 +21,11 @@ public class PsqlJDBC extends BaseClass{
 			
 			set.getString(0);
 		}
-		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		
 	}
 

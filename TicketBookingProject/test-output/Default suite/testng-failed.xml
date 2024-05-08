@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.testcases.TC1_clickSearch">
+      <class name="com.test.testcases.TC2_TrainDetailComparison">
         <methods>
           <include name="endAutomationSuite"/>
           <include name="launchBrowser"/>
+          <include name="getTrainName" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="additionagain"/>
           <include name="startAutomationSuite"/>
-          <include name="divisionagain"/>
         </methods>
-      </class> <!-- com.test.testcases.TC1_clickSearch -->
+      </class> <!-- com.test.testcases.TC2_TrainDetailComparison -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -12,6 +12,7 @@
         <classes>
             <class name="com.test.base.BaseClass"/>
             <class name="com.test.testcases.TC1_clickSearch"/>
+             <class name="com.test.testcases.TC2_TrainDetailComparison"/>
         </classes>
     </test>
 </suite>
