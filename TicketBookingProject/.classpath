@@ -38,5 +38,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="/VembuBDRBackupScheduling/Dependencies/ExtendReports/extentreports-4.0.6.jar"/>
+	<classpathentry kind="lib" path="/VembuBDRBackupScheduling/Dependencies/Logger/apache-logging-log4j.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.test.base.BaseClass;
 import com.test.pages.TrainDetails;
 import com.test.pages.confirmTktPage;
+import com.test.testutility.Log;
 
 public class TC1_clickSearch extends BaseClass {
 	
@@ -17,7 +18,9 @@ public class TC1_clickSearch extends BaseClass {
 	
 	@Test(description = "First test method", priority=0, groups="smoke")
 	public void clickSearchTicket() {
+		Log.startTestCase("clickSearchTicket");
 		confirm = new confirmTktPage();
+		Log.info("User is going to check visibility");
 		System.out.println(confirm.checkVisibility());
 		Assert.assertTrue(confirm.checkVisibility());
 		confirm.scrollDown();

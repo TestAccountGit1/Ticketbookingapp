@@ -1,5 +1,6 @@
 package com.test.base;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,6 +15,7 @@ import org.testng.annotations.Test;
 
 import com.test.testinput.ReadInputData;
 import com.test.testutility.ExtentReport;
+import com.test.testutility.Log;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -21,6 +23,7 @@ public class BaseClass {
 	@BeforeSuite(groups="smoke")
 	public void startAutomationSuite()
 	{
+		DOMConfigurator.configure("log4j.xml");
 		ExtentReport.setExtent();
 		System.out.println("Project started");
 	}
@@ -35,7 +38,7 @@ public class BaseClass {
 	@BeforeMethod(groups="smoke")
 	public void launchBrowser(@Optional("chrome") String browserName)
 	{
-		
+	
 		try {
 		if(browserName.equalsIgnoreCase("chrome") ) {
 			driver = new ChromeDriver();
