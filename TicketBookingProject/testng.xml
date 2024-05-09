@@ -3,7 +3,7 @@
 <suite name="Ticket Booking Project">
 	<listeners>
 		<listener class-name="com.test.testutility.Listener"/>
-		
+		<listener class-name="com.test.testutility.MyTransformer"/>
 	</listeners>
     <test name="TestCasesSuite">
         <parameter name="browserName" value="chrome"/>
